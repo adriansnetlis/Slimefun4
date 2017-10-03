@@ -103,4 +103,12 @@ public class TalismanListener implements Listener {
 			}
 		}
 	}
+	
+	@EventHandler
+	public void onExpChange(PlayerExpChangeEvent e) {
+		if (Talisman.checkFor(e, SlimefunItem.getByName("WINGS_TALISMAN"))) {
+			Player p = e.getPlayer();
+			setAllowFlight(true);
+		}
+	}
 }
